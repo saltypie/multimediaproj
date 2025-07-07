@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ryukyuan Languages Overview</title>
+    <!-- Re-use style block from index.html for consistency -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            color: #ffffff;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        .content {
+            max-width: 800px;
+            text-align: left;
+            animation: fadeInLeft 1.5s ease-out;
+        }
+        .content h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #ffffff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .content h2 {
+            font-size: 1.75rem;
+            margin: 1.5rem 0 0.75rem;
+            color: #ffe08a;
+        }
+        .content p, .content li {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+        ul { padding-left: 1.2rem; }
+        .cta-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            margin-top: 2rem;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Ryukyuan Languages</h1>
+            <p>The Ryukyuan languages (琉球語派, Ryūkyū-goha) are the indigenous tongues of the Ryukyu Islands. Together with Japanese and Hachijō, they form the Japonic language family, yet they are not mutually intelligible with Standard Japanese nor with one another.</p>
+
+            <h2>Overview</h2>
+            <p>UNESCO classifies four of the six Ryukyuan languages as “definitely endangered” and the remaining two as “severely endangered” due to rapid language shift toward Standard Japanese.</p>
+
+            <h2>Phonology Highlights</h2>
+            <ul>
+                <li>Syllabic consonants, including <em>voiceless</em> syllabic fricatives (e.g.&nbsp;Miyako <code>/kss/</code> ‘breast’).</li>
+                <li>Glottalised consonants such as Yuwan Amami <code>/ʔma/</code> ‘horse’.</li>
+                <li>Central close vowel <code>[ɨ]</code> in some varieties (e.g.&nbsp;Yuwan Amami).</li>
+                <li>Voiceless nasal phoneme <code>/n̥/</code> in Ikema Miyako.</li>
+                <li>Contrastive pitch-accent systems across most varieties.</li>
+            </ul>
+
+            <h2>Grammar Snapshot</h2>
+            <ul>
+                <li>Subject–Object–Verb word order with nominative–accusative alignment.</li>
+                <li>Adjectives function as bound morphemes, entering compounds or taking verbal endings.</li>
+                <li>A single case marker often covers both nominative and genitive roles and changes form according to an animacy hierarchy.</li>
+                <li>Dedicated topic and focus particles; verbs display a special focus inflection preserved from Old Japanese.</li>
+            </ul>
+
+            <h2>Writing Systems</h2>
+            <p>Traditional Ryukyuan texts employed a mix of Classical Chinese and an Okinawan-adapted <em>hiragana</em>. Contemporary orthographies vary: modified kana, katakana for phonetic detail, and several romanisation schemes are all in scholarly use. Daily written usage remains limited.</p>
+
+            <h2>Classification &amp; Varieties</h2>
+            <p>The six widely recognised languages fall into two branches:</p>
+            <ul>
+                <li><strong>Northern Ryukyuan</strong> – Amami, Kunigami, Okinawan</li>
+                <li><strong>Southern Ryukyuan</strong> – Miyako, Yaeyama, Yonaguni</li>
+            </ul>
+            <p>Lexical similarity to Standard Japanese is around 70 %; mutual intelligibility is minimal.</p>
+
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/s_CSmPckPsg" title="Ryukyuan Languages Documentary" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <a href="./index.html" class="cta-button">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
