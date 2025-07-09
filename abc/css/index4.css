@@ -1,0 +1,198 @@
+/* Extracted from index4.html <style> */
+.snake-skin-page * {
+  box-sizing: border-box;
+}
+
+.snake-skin-page {
+  margin: 0;
+  height: 100vh;
+  background: url('../snake-skin.jpg') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.snake-skin-page h1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  z-index: 1000; /* Always on top */
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.403);
+}
+
+.snake-skin-page .string-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 120px; /* Simulates sanshin neck */
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  z-index: 1; /* Behind everything else */
+}
+
+.snake-skin-page .string {
+  width: 8px;
+  height: 100%;
+  background-color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s;
+  z-index: 1;
+}
+
+.snake-skin-page .string:hover {
+  background-color: #999;
+}
+
+.snake-skin-page .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: yellow;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  display: none;
+}
+
+.snake-skin-page .string:hover .tooltip {
+  display: block;
+}
+
+.snake-skin-page .window-header {
+  background-color: #222;
+  color: white;
+  padding: 6px 10px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.snake-skin-page .btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.snake-skin-page .maximized {
+  width: 90% !important;
+  height: 80% !important;
+  top: 10% !important;
+  left: 5% !important;
+}
+
+.snake-skin-page .permanent-info {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  width: 300px;
+  background: white;
+  border: 2px solid #444;
+  border-radius: 8px;
+  z-index: 10; /* Below popup windows */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.snake-skin-page .permanent-info .window-header {
+  background-color: #222;
+  color: white;
+  padding: 6px 10px;
+  font-weight: bold;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.snake-skin-page .permanent-info .window-content {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.snake-skin-page .falling-leaves {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.snake-skin-page .leaf {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #90EE90, #228B22);
+  border-radius: 0 100% 0 100%;
+  transform: rotate(45deg);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.snake-skin-page .flower {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #FFB6C1, #FF69B4);
+  border-radius: 50%;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.snake-skin-page .flower::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.6), rgba(255, 105, 180, 0.6));
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes drift {
+  to {
+    transform: translateY(100vh) translateX(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes spiral {
+  to {
+    transform: translateY(100vh) translateX(50px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes floatDown {
+  to {
+    transform: translateY(100vh) translateX(-30px) rotate(180deg);
+    opacity: 0;
+  }
+} 
