@@ -1,0 +1,94 @@
+/* Reusable Info Window Component Styles */
+.info-window {
+  position: absolute;
+  width: 650px;
+  min-height: 120px;
+  background: white;
+  /* border: 12px solid; */
+  /* border-image: url('https://kogeijapan.com/element/shared/images/kj/okinawa/title/okinawa-07.jpg') 30 round; */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  resize: both;
+  transition: box-shadow 0.2s;
+}
+.info-window.maximized {
+  width: 90vw !important;
+  height: 80vh !important;
+  top: 10vh !important;
+  left: 5vw !important;
+  min-width: 200px;
+  min-height: 100px;
+}
+.info-window-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: move;
+  background: url('https://kogeijapan.com/element/shared/images/kj/okinawa/title/okinawa-07.jpg');
+  background-size: cover;
+  padding: 0;
+  min-height: 38px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  position: relative;
+}
+.info-window-title {
+  font-weight: bold;
+  color: #222;
+  padding: 3px 10px;
+  font-size: 1.1rem;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.7);
+  user-select: none;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(2px);
+  border-radius: 0;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.info-window-buttons {
+  display: flex;
+  align-items: center;
+  background: #111;
+  padding: 0 8px;
+  border-top-right-radius: 6px;
+  height: 100%;
+  z-index: 2;
+}
+.info-window-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 4px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+.info-window-btn:hover {
+  background: rgba(255,255,255,0.15);
+}
+.info-window-content {
+  flex: 1 1 auto;
+  padding: 16px;
+  overflow: auto;
+  font-size: 1rem;
+  color: #222;
+}
+.info-window-content figure {
+  display: block;
+  margin: 18px auto;
+  text-align: center;
+}
+.info-window-content figcaption {
+  display: block;
+  text-align: center;
+  margin-top: 6px;
+  font-size: 1rem;
+  color: #666;
+  opacity: 0.95;
+} 

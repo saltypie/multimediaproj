@@ -1,0 +1,147 @@
+/* Extracted from index3.html <style> */
+.okinawa-map-page * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.okinawa-map-page {
+  font-family: 'Georgia', serif;
+  background: url('../sea-animation-mapguffin.gif') repeat;
+  /* background: url('../ocean-wave-7-colorful-blue-waves-acegif.gif') repeat; */
+  background-size: cover;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.okinawa-map-page h1 {
+  text-align: center;
+  color: white;
+  padding: 2rem 1rem 1rem;
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.okinawa-map-page .map-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.okinawa-map-page .map-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.okinawa-map-page .icon {
+  position: absolute;
+  font-size: 1.8rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.okinawa-map-page .popup {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 12px solid;
+  border-image: url('https://kogeijapan.com/element/shared/images/kj/okinawa/title/okinawa-07.jpg') 30 round;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  resize: both;
+}
+
+.okinawa-map-page .popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  cursor: move;
+}
+
+.okinawa-map-page .close-btn {
+  cursor: pointer;
+  color: #444;
+  font-size: 1.2rem;
+  z-index: 2;
+}
+
+.okinawa-map-page .floating-leaves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.okinawa-map-page .leaf, .okinawa-map-page .flower {
+  position: absolute;
+  border-radius: 50%;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.okinawa-map-page .leaf {
+  width: 12px; height: 12px;
+  background: radial-gradient(circle, #90EE90, #228B22);
+  border-radius: 0 100% 0 100%;
+  transform: rotate(45deg);
+}
+
+.okinawa-map-page .flower {
+  width: 10px; height: 10px;
+  background: radial-gradient(circle, #FFB6C1, #FF69B4);
+}
+
+.okinawa-map-page .flower::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px;
+  width: 14px; height: 14px;
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.6), rgba(255, 105, 180, 0.6));
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.okinawa-map-page .info-img {
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 18px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.okinawa-map-page .carousel-img {
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 18px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.okinawa-map-page figure figcaption {
+  text-align: center;
+  margin-top: 6px;
+  font-size: 1rem;
+  color: #222;
+  opacity: 0.95;
+}
+
+@keyframes fall { to { transform: translateY(100vh) rotate(360deg); opacity: 0; } }
+@keyframes drift { to { transform: translateY(100vh) translateX(-100px) rotate(360deg); opacity: 0; } }
+@keyframes spiral { to { transform: translateY(100vh) translateX(50px) rotate(720deg); opacity: 0; } }
+@keyframes floatDown { to { transform: translateY(100vh) translateX(-30px) rotate(180deg); opacity: 0; } } 

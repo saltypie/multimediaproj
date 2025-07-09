@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #001f3f;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  background-color: #003366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero h1 { color: #fff; font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 1rem; }
+.hero p { color: #dbe9f4; margin-bottom: 2rem; font-size: 1.2rem; }
+
+.cta-button {
+  padding: 1rem 2rem;
+  background-color: #004080;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.cta-button:hover { background-color: #0059b3; }
+
+/* Main Content */
+.main-content { padding: 4rem 2rem; max-width: 1200px; margin: auto; }
+.content-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+  gap: 2rem;
+}
+
+.content-block {
+  background-color: #002244;
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.content-block:hover { transform: translateY(-5px); }
+
+.content-block h3 {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+}
+.content-block p { color: #dbe9f4; }
+
+.content-block img {
+  width: 100%;
+  border-radius: 10px;
+  filter: grayscale(10%) brightness(0.95);
+  margin-bottom: 1rem;
+}
+
+/* Opinion Blocks */
+.content-block.opinion {
+  border-left: 4px solid;
+  padding-left: 1rem;
+  background-color: rgba(0,32,63,0.25);
+}
+.content-block.opinion.negative {
+  border-color: #cc3333;
+}
+.content-block.opinion.positive {
+  border-color: #33cc77;
+}
+.content-block.opinion h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+.content-block.opinion p { font-style: italic; color: #e0e8f2; }
+
+/* Footer */
+.footer {
+  background-color: #001a33;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.footer-nav a {
+  color: #aaccff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-nav a:hover { color: #fff; }
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.social-icon {
+  background-color: #004080;
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+.social-icon:hover { background-color: #0066cc; }
+
+.footer-bottom { color: #99aabb; font-size: 0.9rem; }
