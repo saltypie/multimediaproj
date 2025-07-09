@@ -1,0 +1,246 @@
+/* Extracted from index.html <style> */
+.nature-landing-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nature-landing-page {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.nature-landing-page .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.nature-landing-page .content {
+    max-width: 70%;
+    color: white;
+    animation: fadeInLeft 1.5s ease-out;
+    text-align: center;
+}
+
+.nature-landing-page .content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, #ffffff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nature-landing-page .content p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.nature-landing-page .cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.nature-landing-page .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+}
+
+.nature-landing-page .video-card {
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 720px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    background-image: url('https://kogeijapan.com/element/shared/images/kj/okinawa/title/okinawa-07.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.nature-landing-page .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.nature-landing-page .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.nature-landing-page .leaf {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #90EE90, #228B22);
+    border-radius: 0 100% 0 100%;
+    transform: rotate(45deg);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.nature-landing-page .flower {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #FFB6C1, #FF69B4);
+    border-radius: 50%;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.nature-landing-page .flower::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 14px;
+    height: 14px;
+    background: radial-gradient(circle, rgba(255, 182, 193, 0.6), rgba(255, 105, 180, 0.6));
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.nature-landing-page .falling-leaves {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+    overflow: hidden;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes drift {
+    to {
+        transform: translateY(100vh) translateX(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes spiral {
+    to {
+        transform: translateY(100vh) translateX(50px) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes floatDown {
+    to {
+        transform: translateY(100vh) translateX(-30px) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+.nature-landing-page .floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.nature-landing-page .floating-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+.nature-landing-page .circle1 {
+    width: 60px;
+    height: 60px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.nature-landing-page .circle2 {
+    width: 40px;
+    height: 40px;
+    top: 60%;
+    left: 15%;
+    animation-delay: 2s;
+}
+
+.nature-landing-page .circle3 {
+    width: 80px;
+    height: 80px;
+    top: 40%;
+    left: 5%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+@media (max-width: 768px) {
+    .nature-landing-page .content {
+        max-width: 90%;
+    }
+
+    .nature-landing-page .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .nature-landing-page .content p {
+        font-size: 1rem;
+    }
+
+    .nature-landing-page .video-card {
+        padding: 1rem;
+    }
+} 

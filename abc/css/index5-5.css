@@ -1,0 +1,182 @@
+/* Extracted from index5-5.html <style> */
+.okinawa-history-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.okinawa-history-page {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.okinawa-history-page .title {
+  text-align: center;
+  padding: 20px;
+}
+
+.okinawa-history-page .title h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  background: linear-gradient(45deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.okinawa-history-page .slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.okinawa-history-page .slider-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.okinawa-history-page .slider-container input[type="range"] {
+  width: 100%;
+}
+
+.okinawa-history-page .content-container {
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding: 0 20px;
+  scroll-behavior: smooth;
+}
+
+.okinawa-history-page main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.okinawa-history-page section {
+  margin-bottom: 100px;
+  transition: opacity 0.5s;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+}
+
+.okinawa-history-page h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+}
+
+.okinawa-history-page .subheading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.okinawa-history-page img.content-img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.okinawa-history-page .falling-leaves {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.okinawa-history-page .leaf {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #90EE90, #228B22);
+  border-radius: 0 100% 0 100%;
+  transform: rotate(45deg);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.okinawa-history-page .flower {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #FFB6C1, #FF69B4);
+  border-radius: 50%;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.okinawa-history-page .flower::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.6), rgba(255, 105, 180, 0.6));
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes drift {
+  to {
+    transform: translateY(100vh) translateX(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes spiral {
+  to {
+    transform: translateY(100vh) translateX(50px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes floatDown {
+  to {
+    transform: translateY(100vh) translateX(-30px) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+.okinawa-history-page .era-icon {
+  position: fixed;
+  bottom: 10px;
+  width: 80px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.okinawa-history-page .era-icon.left {
+  left: 10px;
+}
+
+.okinawa-history-page .era-icon.right {
+  right: 10px;
+} 
